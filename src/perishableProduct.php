@@ -12,7 +12,7 @@ class PerishableProduct extends Product {
     }
 
     public function isExpired() {
-        
+        return ($this->daysToExpire() <= 0);
     }
 
     public function daysToExpire() {
@@ -20,5 +20,13 @@ class PerishableProduct extends Product {
         return $diff;
     }  
 
-    public function getPrice() {}
+    public function getPrice() {
+        if ($this->daysToExpire() <= 30) {
+            return ($this->basePrice * 0.9);
+        } else if ($this->daysToExpire() <= 10) {
+            return ($this->basePrice * 0.75);
+        } else if ($this->daysToExpire() <= 0) {
+            return 0;
+        }
+    }
 }
