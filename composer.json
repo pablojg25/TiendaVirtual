@@ -1,0 +1,10 @@
+{
+    "name": "dsw/tienda-virtual",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dsw\\TiendaVirtual\\": "src/"
+        }
+    },
+    "require": {}
+}
