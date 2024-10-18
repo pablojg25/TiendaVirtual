@@ -16,8 +16,7 @@ class PerishableProduct extends Product {
     }
 
     public function daysToExpire() {
-        $diff = ($this->expirationDate)->diff(new DateTime('now'))->days;
-        return $diff;
+        return ($this->expirationDate)->diff(new DateTime('now'))->days;
     }  
 
     public function getPrice() {

@@ -4,7 +4,12 @@ namespace Dsw\TiendaVirtual;
 class MixedService extends Event implements Session {
     private int $sessionNumber;
 
-    public function constructor() {}
+    public function __construct($name, $basePrice, $executionDate, $sessionNumber) {
+        parent::__construct($name, $basePrice, $executionDate);
+        $this->sessionNumber = $sessionNumber;
+    }
 
-    public function useSession() {}
+    public function useSession() {
+        $this->sessionNumber--;
+    }
 }
