@@ -2,11 +2,12 @@
 namespace Dsw\TiendaVirtual;
 
 use \DateTime;
+use Dsw\TiendaVirtual\Service;
 
 class Event extends Service {
     public DateTime $executionDate;
 
-    public function constructor($name, $basePrice, $executionDate) {
+    public function __construct($name, $basePrice, $executionDate) {
         parent::__construct($name, $basePrice);
         $this->executionDate = new DateTime($executionDate);
     }
@@ -27,5 +28,9 @@ class Event extends Service {
         } else if ($this->daysLeft() >= 7) {
             return ($this->basePrice * 1.2);
         }
+    }
+
+    public function __toString() {
+        return sprintf("%s con fecha de %s",parent::__toString(),$this->executionDate->format("d-m-Y"));
     }
 }

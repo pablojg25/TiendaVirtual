@@ -28,4 +28,9 @@ class PerishableProduct extends Product {
             return ($this->basePrice * 0.75);
         }
     }
+
+    public function __toString()
+    {
+        return sprintf("%s que caduca el %s",parent::__toString(),$this->expirationDate->format("d-m-Y"));
+    }
 }
