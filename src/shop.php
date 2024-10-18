@@ -2,7 +2,9 @@
 namespace Dsw\TiendaVirtual;
 
 class Shop {
-    public function addElements(Element $element) {}
+    public $items = [];
+
+    public function addElements(Item $element) {}
 
     public function showElements() {}
 

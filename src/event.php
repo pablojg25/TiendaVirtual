@@ -1,8 +1,12 @@
 <?php
 namespace Dsw\TiendaVirtual;
 
+use \DateTime;
+
 class Event extends Service {
-    public Date $ExecutionDate;
+    public DateTime $ExecutionDate;
+
+    public function constructor() {}
 
     public function eventDone () {}
 
