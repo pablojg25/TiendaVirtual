@@ -1,5 +1,4 @@
 <?php
-//Crear objeto Tienda
 
 use Dsw\TiendaVirtual\Event;
 use Dsw\TiendaVirtual\MixedService;
