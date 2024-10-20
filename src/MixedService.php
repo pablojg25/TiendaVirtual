@@ -12,4 +12,7 @@ class MixedService extends Event implements Session {
     public function useSession() {
         $this->sessionNumber--;
     }
+    public function __toString() {
+        return sprintf("%d %s quedan en el mes de",$this->sessionNumber,$this->name,$this->executionDate );
+    }
 }
