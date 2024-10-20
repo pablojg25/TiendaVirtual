@@ -11,8 +11,12 @@ class Item {
         $this->basePrice = $basePrice;
     }
 
-    public function getPrice() {}
+    public function getPrice() {
+        return $this->basePrice * (1 + $this->tax);
+    }
 
-    public function setTax(float $tax) {}
+    public function setTax(float $tax) {
+        $this->tax = $newTax;
+    }
 
 }
