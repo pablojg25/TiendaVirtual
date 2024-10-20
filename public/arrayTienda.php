@@ -4,9 +4,10 @@
 require "../vendor/autoload.php";
 
 use Dsw\TiendaVirtual\Event;
+use Dsw\TiendaVirtual\MixedService;
 use Dsw\TiendaVirtual\PerishableProduct;
 use Dsw\TiendaVirtual\Product;
-use Dsw\TiendaVirtual\Service;
+use Dsw\TiendaVirtual\SessionService;
 
 $product = new Product("Una aspiradora con nombre Cyclone 23",89.99,"Braun", 4250, 3300);
 echo $product;
