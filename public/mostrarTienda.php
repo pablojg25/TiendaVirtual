@@ -1,6 +1,9 @@
 <?php
 
 require "../vendor/autoload.php";
+include "./arrayTienda.php";
+$filter = $_GET['showStore'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,7 @@ require "../vendor/autoload.php";
 </head>
 <body>
     <h2><?php 
-    switch ($_GET['showStore']) {
+    switch ($filter) {
         case 'showElements':
             echo 'Mostrar todos los elementos';
             break;
@@ -29,8 +32,30 @@ require "../vendor/autoload.php";
             break;
     }
     ?></h2>
-    <p>
-        
-    </p>
+    <ul>
+        <?php
+        $tienda;
+        switch ($filter) {
+            case 'showElements':
+                $tienda = $shop->showElements();
+                break;
+            case 'showProducts':
+                $tienda = $shop->showProducts();
+                break;
+            case 'showServices':
+                $tienda = $shop->showServices();
+                break;
+            case 'showExpirationDate':
+                $tienda = $shop->showExpirationDate();
+                break;
+            case 'showSellable':
+                $tienda = $shop->showSellable();
+                break;
+        }
+        foreach($tienda as $element) {
+            echo "<li>" . $element->__toString() . "</li>\n";
+        }
+        ?>
+    </ul>
 </body>
 </html>
