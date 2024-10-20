@@ -17,8 +17,8 @@ echo "<br>" . $perishable;
 $event = new Event("android",500,"2024/10/19");
 echo "<br>" . $event;
 
-$sessionService = new SessionService("Clases de piano", 0,10);
+$sessionService = new SessionService("Clases de piano", 50,10);
 echo "<br>" . $sessionService;
 
-// $mixedService = new MixedService("Clases de Yoga",45,"2024/11/15",12);
-// echo "<br>" . $mixedService;
+$mixedService = new MixedService("Clases de Yoga",45,"2024/11/15",12);
+echo "<br>" . $mixedService;
