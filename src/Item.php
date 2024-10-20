@@ -16,7 +16,7 @@ class Item {
     }
 
     public function setTax(float $tax) {
-        $this->tax = $newTax;
+        $this->tax = $tax;
     }
 
 }
