@@ -8,7 +8,8 @@ class Shop {
         $this->items[] = $element;
     }
 
-    public function showElements() {}
+    public function showElements() {
+    }
 
     public function showProducts() {}
 
