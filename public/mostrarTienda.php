@@ -34,25 +34,25 @@ $filter = $_GET['showStore'];
     ?></h2>
     <ul>
         <?php
-        $tienda;
+        $store;
         switch ($filter) {
             case 'showElements':
-                $tienda = $shop->showElements();
+                $store = $shop->showElements();
                 break;
             case 'showProducts':
-                $tienda = $shop->showProducts();
+                $store = $shop->showProducts();
                 break;
             case 'showServices':
-                $tienda = $shop->showServices();
+                $store = $shop->showServices();
                 break;
             case 'showExpirationDate':
-                $tienda = $shop->showExpirationDate();
+                $store = $shop->showExpirationDate();
                 break;
             case 'showSellable':
-                $tienda = $shop->showSellable();
+                $store = $shop->showSellable();
                 break;
         }
-        foreach($tienda as $element) {
+        foreach($store as $element) {
             echo "<li>" . $element->__toString() . "</li>\n";
         }
         ?>
